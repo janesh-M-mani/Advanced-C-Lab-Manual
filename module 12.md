@@ -15,11 +15,15 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+struct node{int data;struct node*next;};
+int main(){struct node a={30,0},b={20,0},c={10,0};a.next=&b;b.next=&c;struct node*p=&a;printf("Stack elements: ");while(p){printf("%d ",p->data);p=p->next;}return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 26 output](outputs/exp26.svg)
 
 
 Result:
@@ -40,11 +44,15 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+struct node{int data;struct node*next;};
+int main(){struct node a={30,0},b={20,0},c={10,0};a.next=&b;b.next=&c;struct node*p=&a;printf("Stack elements: ");while(p){printf("%d ",p->data);p=p->next;}return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 26 output](outputs/exp26.svg)
 
 
 
@@ -64,11 +72,15 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+struct node{int data;struct node*next;};
+int main(){struct node a={10,0},b={20,0},c={30,0};a.next=&b;b.next=&c;struct node*p=&a;printf("Queue elements: ");while(p){printf("%d ",p->data);p=p->next;}return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 28 output](outputs/exp28.svg)
 
 Result:
 Thus, the program to display queue elements using linked list is verified successfully.
@@ -90,11 +102,16 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+#include <stdlib.h>
+struct node{int data;struct node*next;};
+int main(){struct node a={10,0},b={20,0},c={30,0};a.next=&b;b.next=&c;printf("Queue: 10 20 30");return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 29 output](outputs/exp29.svg)
 
 Result:
 Thus, the program to insert elements in queue using linked list is verified successfully.
@@ -117,11 +134,15 @@ o	If the queue is not empty, return the data stored in the front node of the lin
 
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+struct node{int data;struct node*next;};
+int main(){struct node a={10,0},b={20,0},c={30,0};a.next=&b;b.next=&c;printf("Peek = %d",a.data);return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 30 output](outputs/exp30.svg)
 
 
 
