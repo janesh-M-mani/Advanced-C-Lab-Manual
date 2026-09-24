@@ -16,7 +16,11 @@ Else
  
 Program:
 
-// Type your code here
+```c
+#include <stdio.h>
+struct eligible{int age;char n[50];};
+int main(){struct eligible e;scanf("%d %49s",&e.age,e.n);printf("Name: %s\nAge: %d\nVaccine Eligibility: %s",e.n,e.age<=6?"No":"Yes");return 0;}
+```
 
 
 Output:
