@@ -16,7 +16,10 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+int main(){int n;scanf("%d",&n);switch(n){case 71:printf("seventy one");break;case 72:printf("seventy two");break;case 73:printf("seventy three");break;case 74:printf("seventy four");break;case 75:printf("seventy five");break;case 76:printf("seventy six");break;case 77:printf("seventy seven");break;case 78:printf("seventy eight");break;case 79:printf("seventy nine");break;default:printf("Greater than 79");}return 0;}
+```
 
 
 
@@ -24,7 +27,7 @@ Program:
 Output:
 
 
-//paste your output here
+![Experiment 6 output](outputs/exp06.svg)
 
 
 
@@ -47,7 +50,10 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+int main(){char s[100];int c[10]={0},i;scanf("%99s",s);for(i=0;s[i];i++)if(s[i]>='0'&&s[i]<='9')c[s[i]-'0']++;for(i=0;i<10;i++)printf("%d%c",c[i],i==9?'\n':' ');return 0;}
+```
 
 
 
@@ -55,7 +61,7 @@ Program:
 Output:
 
 
-//paste your output here
+![Experiment 7 output](outputs/exp07.svg)
 
 
 
@@ -84,7 +90,13 @@ Free the memory allocated for each string in s Free the memory allocated for s
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+#include <string.h>
+void sw(char*a,char*b){char t=*a;*a=*b;*b=t;}
+void perm(char*s,int l,int r){int i,j;if(l==r){printf("%s\n",s);return;}for(i=l;i<=r;i++){for(j=l;j<i&&s[j]!=s[i];j++);if(j<i)continue;sw(&s[l],&s[i]);perm(s,l+1,r);sw(&s[l],&s[i]);}}
+int main(){char s[30];int i,j,n;scanf("%29s",s);n=strlen(s);for(i=0;i<n;i++)for(j=i+1;j<n;j++)if(s[i]>s[j])sw(&s[i],&s[j]);perm(s,0,n-1);return 0;}
+```
 
 
 
@@ -92,7 +104,7 @@ Program:
 Output:
 
 
-//paste your output here
+![Experiment 8 output](outputs/exp08.svg)
 
 
 
@@ -117,7 +129,10 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+int main(){int n,i,j,m;scanf("%d",&n);for(i=0;i<2*n-1;i++){for(j=0;j<2*n-1;j++){m=i<j?i:j;m=m<2*n-2-i?m:2*n-2-i;m=m<2*n-2-j?m:2*n-2-j;printf("%d ",n-m);}puts("");}return 0;}
+```
 
 
 
@@ -125,7 +140,7 @@ Program:
 Output:
 
 
-//paste your output here
+![Experiment 9 output](outputs/exp09.svg)
 
 
 
@@ -156,7 +171,11 @@ o	Call the square() function and display the result.
 
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+int square(){int n;scanf("%d",&n);return n*n;}
+int main(){printf("Square = %d",square());return 0;}
+```
 
 
 
@@ -164,7 +183,7 @@ Program:
 Output:
 
 
-//paste your output here
+![Experiment 10 output](outputs/exp10.svg)
 
 
 
