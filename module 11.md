@@ -12,10 +12,13 @@ Algorithm:
 5.	Call the max_of_four function with the input integers and store the result in the greater variable
  
 Program:
-//type your code here
+```c
+#include <stdio.h>
+int max_of_four(int a,int b,int c,int d){int m=a;if(b>m)m=b;if(c>m)m=c;if(d>m)m=d;return m;}int main(){int a,b,c,d;scanf("%d%d%d%d",&a,&b,&c,&d);printf("Greatest = %d",max_of_four(a,b,c,d));return 0;}
+```
 
 Output:
-//paste your output here
+![Experiment 21 output](outputs/exp21.svg)
 
 Result:
 Thus, the program  that create a function to find the greatest number is verified successfully.
@@ -36,10 +39,13 @@ Algorithm:
 7.	Call the calculate_the_max function with input values.
  
 Program:
-//type your code here
+```c
+#include <stdio.h>
+void calculate_the_max(int n,int k){int a=0,o=0,x=0,i,j,v;for(i=1;i<=n;i++)for(j=i+1;j<=n;j++){v=i&j;if(v>a&&v<k)a=v;v=i|j;if(v>o&&v<k)o=v;v=i^j;if(v>x&&v<k)x=v;}printf("AND = %d\nOR = %d\nXOR = %d",a,o,x);}int main(){int n,k;scanf("%d%d",&n,&k);calculate_the_max(n,k);return 0;}
+```
 
 Output:
-//paste your output here
+![Experiment 22 output](outputs/exp22.svg)
 
 Result:
 Thus, the program to print the maximum values for the AND, OR and XOR comparisons
@@ -59,10 +65,13 @@ Algorithm:
 5.	Use a for loop to iterate over the queries.
  
 Program:
-//type your code here
+```c
+#include <stdio.h>
+int main(){int s,q,i,t,x,y,n[100]={0},a[100][100]={0};scanf("%d%d",&s,&q);for(i=0;i<q;i++){scanf("%d%d%d",&t,&x,&y);if(t==1)a[x][n[x]++]=y;else if(t==2)printf("%d\n",a[x][y]);}return 0;}
+```
 
 Output:
-//paste your output here
+![Experiment 23 output](outputs/exp23.svg)
 
 
 Result:
@@ -86,10 +95,13 @@ Algorithm:
 
 
 Program:
-//type your code here
+```c
+#include <stdio.h>
+int main(){int n,i,x,sum=0;scanf("%d",&n);for(i=0;i<n;i++){scanf("%d",&x);sum+=x;}printf("Sum = %d",sum);return 0;}
+```
 
 Output:
-//paste your output here
+![Experiment 24 output](outputs/exp24.svg)
 
  
 
@@ -120,10 +132,14 @@ o	If a character is not a space, it may belong to a word. If it's the first non-
 
 
 Program:
-//type your code here
+```c
+#include <stdio.h>
+#include <ctype.h>
+int main(){char s[200];int i,w=0,in=0;fgets(s,sizeof(s),stdin);for(i=0;s[i];i++){if(!isspace((unsigned char)s[i])){if(!in)w++;in=1;}else in=0;}printf("Number of words = %d",w);return 0;}
+```
 
 Output:
-//paste your output here
+![Experiment 25 output](outputs/exp25.svg)
 
 
 
