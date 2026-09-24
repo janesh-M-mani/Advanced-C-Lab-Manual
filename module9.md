@@ -13,11 +13,14 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+int main(){int s[5]={10,20,30,40,50},i;printf("Stack elements: ");for(i=4;i>=0;i--)printf("%d ",s[i]);return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 11 output](outputs/exp11.svg)
 
 
 
@@ -36,11 +39,15 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+#define N 5
+int s[N],top=-1;void push(int x){if(top<N-1)s[++top]=x;}int main(){int x,i;scanf("%d",&x);push(x);printf("Stack: ");for(i=top;i>=0;i--)printf("%d ",s[i]);return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 12 output](outputs/exp12.svg)
 
 
 
@@ -62,11 +69,14 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+int main(){int q[5]={10,20,30,40,50},i;printf("Queue elements: ");for(i=0;i<5;i++)printf("%d ",q[i]);return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 13 output](outputs/exp13.svg)
 
 
 Result:
@@ -86,11 +96,15 @@ Algorithm:
 
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+#define N 5
+int q[N],f=0,r=-1;void enqueue(int x){if(r<N-1)q[++r]=x;}int main(){int x,i;scanf("%d",&x);enqueue(x);printf("Queue: ");for(i=f;i<=r;i++)printf("%d ",q[i]);return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 14 output](outputs/exp14.svg)
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -121,11 +135,14 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+int main(){int q[5]={10,20,30,40,50},f=0,r=4,i;printf("Deleted: %d\n",q[f++]);printf("Queue: ");for(i=f;i<=r;i++)printf("%d ",q[i]);return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 15 output](outputs/exp15.svg)
 
 
 Result:
