@@ -10,11 +10,15 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+#include <stdlib.h>
+struct node{int data;struct node*next;};int main(){int n,x,key,i;struct node*h=0,*t=0,*p;scanf("%d",&n);for(i=0;i<n;i++){scanf("%d",&x);p=malloc(sizeof(*p));p->data=x;p->next=0;if(!h)h=p;else t->next=p;t=p;}scanf("%d",&key);for(p=h;p;p=p->next)if(p->data==key){printf("Element found");return 0;}printf("Element not found");return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 16 output](outputs/exp16.svg)
 
 
 
@@ -34,11 +38,15 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+#include <stdlib.h>
+struct node{int data;struct node*next;};int main(){int n,x,i;struct node*h=0,*t=0,*p;scanf("%d",&n);for(i=0;i<n;i++){scanf("%d",&x);p=malloc(sizeof(*p));p->data=x;p->next=0;if(!h)h=p;else t->next=p;t=p;}scanf("%d",&x);p=malloc(sizeof(*p));p->data=x;p->next=0;if(!h)h=p;else t->next=p;printf("List: ");for(p=h;p;p=p->next)printf("%d ",p->data);return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 17 output](outputs/exp17.svg)
 
  
 Result:
@@ -58,11 +66,14 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+struct node{int data;struct node*prev,*next;};int main(){struct node a={10,0,0},b={20,&a,0},c={30,&b,0};a.next=&b;b.next=&c;struct node*p=&a;printf("Doubly Linked List: ");while(p){printf("%d ",p->data);p=p->next;}return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 18 output](outputs/exp18.svg)
 
 
 Result:
@@ -83,11 +94,15 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+#include <stdlib.h>
+struct node{int data;struct node*prev,*next;};int main(){int n,x,i;struct node*h=0,*t=0,*p;scanf("%d",&n);for(i=0;i<n;i++){scanf("%d",&x);p=malloc(sizeof(*p));p->data=x;p->prev=t;p->next=0;if(t)t->next=p;else h=p;t=p;}scanf("%d",&x);p=malloc(sizeof(*p));p->data=x;p->prev=t;p->next=0;if(t)t->next=p;else h=p;printf("List: ");for(p=h;p;p=p->next)printf("%d ",p->data);return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 19 output](outputs/exp19.svg)
 
 
 Result:
@@ -125,11 +140,15 @@ o	If the element is not found in any node, print a message indicating the elemen
 
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+#include <stdlib.h>
+struct node{int data;struct node*next;};int main(){int n,x,key,i;struct node*h=0,*t=0,*p,*q;scanf("%d",&n);for(i=0;i<n;i++){scanf("%d",&x);p=malloc(sizeof(*p));p->data=x;p->next=0;if(!h)h=p;else t->next=p;t=p;}scanf("%d",&key);p=h;q=0;while(p&&p->data!=key){q=p;p=p->next;}if(p){if(q)q->next=p->next;else h=p->next;free(p);}printf("List: ");for(p=h;p;p=p->next)printf("%d ",p->data);return 0;}
+```
 
 Output:
 
-//paste your output here
+![Experiment 20 output](outputs/exp20.svg)
 
 
 
