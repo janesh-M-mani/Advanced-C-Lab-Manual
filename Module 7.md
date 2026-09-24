@@ -16,12 +16,16 @@ Else
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+struct eligible{int age;char n[50];};
+int main(){struct eligible e;scanf("%d %49s",&e.age,e.n);printf("Name: %s\nAge: %d\nVaccine Eligibility: %s",e.n,e.age<=6?"No":"Yes");return 0;}
+```
 
 
 Output:
 
-//paste your output here
+![Experiment 1 output](outputs/exp01.svg)
 
 
 Result:
@@ -44,7 +48,12 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+struct numbers{int a,b;};
+struct numbers add(struct numbers n){n.a+=n.b;return n;}
+int main(){struct numbers n;scanf("%d%d",&n.a,&n.b);n=add(n);printf("Sum = %d",n.a);return 0;}
+```
 
 
 
@@ -52,7 +61,7 @@ Program:
 Output:
 
 
-//paste your output here
+![Experiment 2 output](outputs/exp02.svg)
 
 
 
@@ -86,7 +95,10 @@ Use scanf to input the file name into the name array.
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+int main(){char name[100];FILE*p;scanf("%99s",name);p=fopen(name,"w");if(!p)return 1;printf("File opened successfully.\nFile created: %s\n",name);fclose(p);printf("File closed successfully.");return 0;}
+```
 
 
 
@@ -94,7 +106,7 @@ Program:
 Output:
 
 
-//paste your output here
+![Experiment 3 output](outputs/exp03.svg)
 
 
 
@@ -133,7 +145,10 @@ Use scanf to input the file name into the name array and the number of strings i
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+int main(){char name[100],s[100];int n,i;FILE*p;scanf("%99s%d",name,&n);p=fopen(name,"w");if(!p)return 1;for(i=0;i<n;i++){scanf(" %99[^\n]",s);fputs(s,p);fputc('\n',p);}fclose(p);printf("%d strings written to %s successfully.",n,name);return 0;}
+```
 
 
 
@@ -141,7 +156,7 @@ Program:
 Output:
 
 
-//paste your output here
+![Experiment 4 output](outputs/exp04.svg)
 
 
 
@@ -187,7 +202,12 @@ Algorithm:
 
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+#include <stdlib.h>
+struct subject{char name[30];int marks;};
+int main(){int n,i;struct subject*s;scanf("%d",&n);s=malloc(n*sizeof(*s));if(!s)return 1;for(i=0;i<n;i++)scanf("%29s%d",s[i].name,&s[i].marks);printf("Subject Details:\n");for(i=0;i<n;i++)printf("%s %d\n",s[i].name,s[i].marks);free(s);return 0;}
+```
 
 
 
@@ -195,7 +215,7 @@ Program:
 Output:
 
 
-//paste your output here
+![Experiment 5 output](outputs/exp05.svg)
 
 
 
