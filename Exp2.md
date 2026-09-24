@@ -13,14 +13,19 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+struct numbers{int a,b;};
+struct numbers add(struct numbers n){n.a+=n.b;return n;}
+int main(){struct numbers n;scanf("%d%d",&n.a,&n.b);n=add(n);printf("Sum = %d",n.a);return 0;}
+```
 
 
 
 
 Output:
 
-//paste your output screenshots here
+![Experiment 2 output](outputs/exp02.svg)
 
 
 
